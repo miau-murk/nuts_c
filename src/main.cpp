@@ -2,6 +2,5 @@
 
 int main()
 {
-// example
 return 0;
 }
