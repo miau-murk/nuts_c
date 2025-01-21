@@ -83,6 +83,7 @@ double vector_dot(
     double result = 0;
     for (int i = 0; i < (int)a.size(); i++)
         result += a[i] * b[i];
+    return result;
 }
 
 void axpy(
