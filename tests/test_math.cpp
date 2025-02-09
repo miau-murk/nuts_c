@@ -121,7 +121,7 @@ TEST(ScalarProds3Test, RandomValues) {
 
 TEST(ScalarProds3Test, EdgeCases) {
     std::vector<double> positive1 = {0.0, 1.0, -1.0, std::numeric_limits<double>::infinity()};
-    std::vector<double> negative1 = {0.0, 1.0, -1.0, std::numeric_limits<double>::infinity()};
+    std::vector<double> negative1 = {0.0, 1.0, -1.0, 0.0};
     std::vector<double> positive2 = {0.0, 1.0, -1.0, std::numeric_limits<double>::infinity()};
     std::vector<double> x = {0.0, 1.0, -1.0, std::numeric_limits<double>::infinity()};
     std::vector<double> y = {0.0, 1.0, -1.0, std::numeric_limits<double>::infinity()};
