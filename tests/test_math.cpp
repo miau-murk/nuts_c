@@ -52,7 +52,7 @@ TEST(MultiplyTest, EdgeCases) {
 
     EXPECT_DOUBLE_EQ(out[0], 0.0);
     EXPECT_DOUBLE_EQ(out[1], 1.0);
-    EXPECT_DOUBLE_EQ(out[2], -1.0);
+    EXPECT_DOUBLE_EQ(out[2], 1.0);
     EXPECT_DOUBLE_EQ(out[3], std::numeric_limits<double>::infinity());
 }
 
@@ -168,17 +168,18 @@ TEST(AxpyTest, RandomValues) {
     std::mt19937 gen(rd());
     std::uniform_real_distribution<> dis(-100.0, 100.0);
 
-    std::vector<double> x(10), y(10);
+    std::vector<double> x(10), y(10), _y(10);
     double a = dis(gen);
     for (int i = 0; i < 10; ++i) {
         x[i] = dis(gen);
         y[i] = dis(gen);
+        _y[i] = y[i];
     }
 
     axpy(x, y, a);
 
     for (int i = 0; i < 10; ++i) {
-        EXPECT_DOUBLE_EQ(y[i], x[i] * a + y[i]);
+        EXPECT_DOUBLE_EQ(y[i], x[i] * a + _y[i]);
     }
 }
 

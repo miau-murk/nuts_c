@@ -43,9 +43,9 @@ std::pair<double,double> scalar_prods2(
     double s1 = 0, s2 = 0;
     for (int i = 0; i < n; i++) {
         s1 += x[i] * (positive1[i] + positive2[i]);
-        s2 += y[1] * (positive1[i] + positive2[i]);
+        s2 += y[i] * (positive1[i] + positive2[i]);
     }
-    return std::pair<int,int>(s1, s2);
+    return std::pair<double,double>(s1, s2);
 }
 
 std::pair<double,double> scalar_prods3(
@@ -68,9 +68,9 @@ std::pair<double,double> scalar_prods3(
     double s1 = 0, s2 = 0;
     for (int i = 0; i < n; i++) {
         s1 += x[i] * (positive1[i] - negative1[i] + positive2[i]);
-        s2 += y[1] * (positive1[i] - negative1[i] + positive2[i]);
+        s2 += y[i] * (positive1[i] - negative1[i] + positive2[i]);
     }
-    return std::pair<int,int>(s1, s2);
+    return std::pair<double,double>(s1, s2);
 }
 
 double vector_dot(
