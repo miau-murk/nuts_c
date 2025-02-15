@@ -1,0 +1,31 @@
+# CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Build directory
+build/
+
+# Object files
+*.o
+*.obj
+
+# Static libraries
+*.lib
+*.a
+
+# Shared libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+
+# Temporary files
+*.tmp
+*.swp
