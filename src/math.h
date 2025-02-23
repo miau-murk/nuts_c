@@ -4,7 +4,7 @@
 #include <vector>
 #include <utility>
 
-namespace myMath { // ПОДУМАТЬ НАД НАЗВАНИЕМ!
+namespace mathCore { 
 
 double logaddexp(double a, double b);
 void multiply(std::vector<double> const &x, std::vector<double> const &y, std::vector<double> &out);
